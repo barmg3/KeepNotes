@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Light Mode Color -->
+    <color name="colorButton">#fab601</color>
+    <color name="colorBackground">#bddedb</color>
+    <color name="colorWhiteBoard">#ffffff</color>
+    <color name="colorIcons">#000000</color>
+    <!--Dark Mode Color-->
+    <color name="colorButtonDark">#f8a99c</color>
+    <color name="colorBackgroundDark">#000000</color>
+    <color name="colorWhite">#f5f5f5</color>
+    <color name="colorIconsDark">#f5f5f5</color>
+    <color name="colorWhiteBoardDark">#f5f5f5</color>
+    <!--General Color-->
+    <color name="colorWhiteMenu">#f5f5f5</color>
+    <color name="colorBoardBackground1">#C9A0DC</color>
+    <color name="colorBoardBackground2">#FF80ED</color>
+    <color name="colorBoardBackground3">#C0C0C0</color>
+    <color name="colorBoardBackground4">#ff7373</color>
+    <color name="colorBoardBackground5">#407294</color>
+
+    <color name="colorWhite_80">#80ffffff</color>
+    <color name="colorWhite_50">#50ffffff</color>
+
+
+</resources>
