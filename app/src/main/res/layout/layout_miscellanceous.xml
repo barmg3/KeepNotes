@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/miscr_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_50sdp"
+    android:orientation="horizontal"
+    android:background="@drawable/misc_background"
+    android:elevation="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/add_image"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/ic_add_photo"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:contentDescription="@string/add_image"
+            app:tint="@color/colorIcons">
+
+        </ImageView>
+        <ImageView
+            android:id="@+id/add_url"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/ic_add_link"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:contentDescription="@string/add_link"
+            app:tint="@color/colorIcons">
+
+        </ImageView>
+        <ImageView
+            android:id="@+id/change_color"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/ic_color_picker"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:contentDescription="@string/text_color"
+            app:tint="@color/colorIcons">
+
+        </ImageView>
+        <ImageView
+            android:id="@+id/delete_note"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/ic_delete"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:contentDescription="@string/delete_note"
+            app:tint="@color/colorDelete">
+
+        </ImageView>
+
+
+
+</LinearLayout>

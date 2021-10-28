@@ -6,9 +6,18 @@
         <entry key="..\:/AndroidProjects/KeepNotes/app/src/main/res/drawable/add_button.xml" value="0.2708333333333333" />
         <entry key="..\:/AndroidProjects/KeepNotes/app/src/main/res/drawable/background_add_note_button.xml" value="0.2222222222222222" />
         <entry key="..\:/AndroidProjects/KeepNotes/app/src/main/res/drawable/background_nav.xml" value="0.2708333333333333" />
+        <entry key="..\:/AndroidProjects/KeepNotes/app/src/main/res/drawable/misc_background.xml" value="0.2708333333333333" />
+        <entry key="..\:/AndroidProjects/KeepNotes/app/src/main/res/drawable/note_color_1.xml" value="0.2708333333333333" />
+        <entry key="..\:/AndroidProjects/KeepNotes/app/src/main/res/drawable/note_color_2.xml" value="0.2708333333333333" />
+        <entry key="..\:/AndroidProjects/KeepNotes/app/src/main/res/drawable/note_color_3.xml" value="0.2708333333333333" />
+        <entry key="..\:/AndroidProjects/KeepNotes/app/src/main/res/drawable/note_color_4.xml" value="0.2708333333333333" />
+        <entry key="..\:/AndroidProjects/KeepNotes/app/src/main/res/drawable/note_color_5.xml" value="0.2708333333333333" />
         <entry key="..\:/AndroidProjects/KeepNotes/app/src/main/res/drawable/note_container_background.xml" value="0.2708333333333333" />
+        <entry key="..\:/AndroidProjects/KeepNotes/app/src/main/res/drawable/note_textarea_background.xml" value="0.2708333333333333" />
         <entry key="..\:/AndroidProjects/KeepNotes/app/src/main/res/layout/activity_create_note.xml" value="0.264" />
         <entry key="..\:/AndroidProjects/KeepNotes/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/AndroidProjects/KeepNotes/app/src/main/res/layout/layout_miscellanceous.xml" value="0.4" />
+        <entry key="..\:/AndroidProjects/KeepNotes/app/src/main/res/layout/layout_miscellanceous_colors.xml" value="0.2546875" />
         <entry key="..\:/AndroidProjects/KeepNotes/app/src/main/res/layout/note_container.xml" value="0.2546875" />
         <entry key="..\:/AndroidProjects/KeepNotes/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2708333333333333" />
       </map>

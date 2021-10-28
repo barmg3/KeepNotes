@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Keep Notes</string>
     <string name="app">Keep</string>
+    <string name="add_image">Add Image</string>
+    <string name="add_link">Add Link</string>
+    <string name="text_color">Text Color</string>
+    <string name="delete_note">Delete Note</string>
 </resources>
