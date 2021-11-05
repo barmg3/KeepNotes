@@ -14,8 +14,10 @@
         <entry key="..\:/AndroidProjects/KeepNotes/app/src/main/res/drawable/note_color_5.xml" value="0.2708333333333333" />
         <entry key="..\:/AndroidProjects/KeepNotes/app/src/main/res/drawable/note_container_background.xml" value="0.2708333333333333" />
         <entry key="..\:/AndroidProjects/KeepNotes/app/src/main/res/drawable/note_textarea_background.xml" value="0.2708333333333333" />
+        <entry key="..\:/AndroidProjects/KeepNotes/app/src/main/res/drawable/url_dilog_background.xml" value="0.2760416666666667" />
         <entry key="..\:/AndroidProjects/KeepNotes/app/src/main/res/layout/activity_create_note.xml" value="0.264" />
         <entry key="..\:/AndroidProjects/KeepNotes/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/AndroidProjects/KeepNotes/app/src/main/res/layout/add_url_layout.xml" value="0.264" />
         <entry key="..\:/AndroidProjects/KeepNotes/app/src/main/res/layout/layout_miscellanceous.xml" value="0.4" />
         <entry key="..\:/AndroidProjects/KeepNotes/app/src/main/res/layout/layout_miscellanceous_colors.xml" value="0.2546875" />
         <entry key="..\:/AndroidProjects/KeepNotes/app/src/main/res/layout/note_container.xml" value="0.2546875" />

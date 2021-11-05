@@ -5,4 +5,8 @@
     <string name="add_link">Add Link</string>
     <string name="text_color">Text Color</string>
     <string name="delete_note">Delete Note</string>
+    <string name="enter_your_link">Enter Your Link</string>
+    <string name="add_url">Add URL</string>
+    <string name="cancel">Cancel</string>
+    <string name="add">ADD</string>
 </resources>

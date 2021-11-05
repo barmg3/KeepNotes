@@ -16,19 +16,24 @@ import androidx.core.content.ContextCompat;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.GradientDrawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Patterns;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -43,19 +48,24 @@ import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import java.util.regex.Pattern;
 
 public class createNoteActivity extends AppCompatActivity {
 
     private EditText noteTitle , noteText;
-    private TextView dateTime;
+    private TextView dateTime , textWebLink;
     private ImageView  imageColor1 , imageColor2 , imageColor3 , imageColor4 , imageColor5 , imageNote;
-    private LinearLayout colorPicker , miscellanceous;
+    private LinearLayout colorPicker , miscellanceous , layoutWebLink;
+
+
 
     private String selectedTextColor;
     private String selectedImagePath;
 
     private static final int REQUEST_CODE_STORAGE_PERMISSION = 1;
     private static final int REQUEST_CODE_SELECT_IMAGE = 1;
+
+    private AlertDialog addURLDialog;
 
 
 
@@ -72,11 +82,23 @@ public class createNoteActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
+        miscellanceous = findViewById(R.id.misce_layout);
+        colorPicker = findViewById(R.id.miscr_color_layout);
+
+        textWebLink = findViewById(R.id.textWebLink);
+        layoutWebLink = findViewById(R.id.layoutWebLink);
+
+        miscellanceous.findViewById(R.id.add_url).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showAddUrlDialog();
+            }
+        });
+
 
         selectedImagePath = "";
 
-        miscellanceous = findViewById(R.id.misce_layout);
-        colorPicker = findViewById(R.id.miscr_color_layout);
+
         //Add Image Click Listener
         miscellanceous.findViewById(R.id.add_image).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -117,7 +139,7 @@ public class createNoteActivity extends AppCompatActivity {
         imageColor4 = colorPicker.findViewById(R.id.imageColor4);
         imageColor5 = colorPicker.findViewById(R.id.imageColor5);
 
-        //OnClick Listener for change the color and put image on selected color
+        //OnClickListener for change the color and put image on selected color
         colorPicker.findViewById(R.id.viewColor1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -218,6 +240,11 @@ public class createNoteActivity extends AppCompatActivity {
         notes.setColor(selectedTextColor);
         notes.setImagePath(selectedImagePath);
 
+        if(layoutWebLink.getVisibility() == VISIBLE){
+            notes.setWebLink(textWebLink.getText().toString());
+        }
+
+
         @SuppressLint("StaticFieldLeak")
         class saveNoteTask extends AsyncTask<Void , Void , Void>{
 
@@ -301,5 +328,46 @@ public class createNoteActivity extends AppCompatActivity {
             cursor.close();
         }
         return filePath;
+    }
+
+    private void showAddUrlDialog(){
+        if(addURLDialog == null){
+            AlertDialog.Builder builder = new AlertDialog.Builder(createNoteActivity.this);
+            View view = LayoutInflater.from(this).inflate(
+                    R.layout.add_url_layout,(ViewGroup) findViewById(R.id.urlLayout)
+            );
+            builder.setView(view);
+
+            addURLDialog = builder.create();
+            if (addURLDialog.getWindow() != null){
+                addURLDialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
+            }
+            final EditText inputURL = view.findViewById(R.id.inputUrl);
+            inputURL.requestFocus();
+
+            view.findViewById(R.id.textAdd).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (inputURL.getText().toString().trim().isEmpty()){
+                        Toast.makeText(createNoteActivity.this, "Enter Your Link", Toast.LENGTH_SHORT).show();
+                    }else if (!Patterns.WEB_URL.matcher(inputURL.getText().toString()).matches()){
+                        Toast.makeText(createNoteActivity.this, "Enter Valid Link", Toast.LENGTH_SHORT).show();
+                    }else {
+                        textWebLink.setText(inputURL.getText().toString());
+                        layoutWebLink.setVisibility(VISIBLE);
+                        addURLDialog.dismiss();
+                    }
+                }
+            });
+           view.findViewById(R.id.textCancel).setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View view) {
+                   addURLDialog.dismiss();
+               }
+           });
+
+
+        }
+        addURLDialog.show();
     }
 }

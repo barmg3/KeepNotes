@@ -19,17 +19,20 @@
             app:tint="@color/colorIcons">
 
         </ImageView>
+
+
         <ImageView
             android:id="@+id/add_url"
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
-            android:src="@drawable/ic_add_link"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/ic_add_link"
             android:contentDescription="@string/add_link"
             app:tint="@color/colorIcons">
-
         </ImageView>
+
+
         <ImageView
             android:id="@+id/change_color"
             android:layout_width="@dimen/_30sdp"

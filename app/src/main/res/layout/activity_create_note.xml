@@ -92,6 +92,30 @@
 
             </ImageView>
 
+            <LinearLayout
+                android:id="@+id/layoutWebLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/imageNote">
+
+                <TextView
+                    android:id="@+id/textWebLink"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autoLink="web"
+                    android:fontFamily="@font/righteous"
+                    android:includeFontPadding="false"
+                    android:textSize="@dimen/_13ssp"/>
+
+            </LinearLayout>
+
             <EditText
                 android:id="@+id/noteText"
                 android:layout_width="match_parent"
@@ -107,7 +131,7 @@
                 android:textSize="@dimen/_13sdp"
                 android:layout_marginTop="@dimen/_15sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageNote">
+                app:layout_constraintTop_toBottomOf="@+id/layoutWebLink">
 
             </EditText>
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -117,7 +141,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout">
+        app:layout_constraintBottom_toTopOf="@+id/miscellanceous">
 
         <include layout="@layout/layout_miscellanceous_colors">
 
@@ -125,7 +149,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/miscellanceous"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
